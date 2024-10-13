@@ -1,1 +1,131 @@
-/* You can add global styles to this file, and also import other style files */
+/* Reset basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header styles */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Main content styles */
+main {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+#intro {
+  text-align: center;
+  margin-top: 40px;
+}
+
+#intro h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+#intro p {
+  font-size: 1.2em;
+  color: #555;
+}
+
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+footer .social-icons a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+footer .social-icons a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile first approach - Default styles for smaller screens */
+@media (max-width: 768px) {
+
+  /* Adjust navigation for smaller screens */
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  nav ul li a {
+    font-size: 1.5em;
+  }
+
+  /* Adjust main content font size for better readability */
+  #intro h1 {
+    font-size: 2em;
+  }
+
+  #intro p {
+    font-size: 1em;
+  }
+
+  /* Adjust footer padding */
+  footer {
+    padding: 15px 0;
+  }
+}
+
+/* Larger screens adjustments */
+@media (min-width: 769px) {
+  nav ul {
+    flex-direction: row;
+  }
+
+  main {
+    max-width: 1000px;
+  }
+
+  #intro h1 {
+    font-size: 3em;
+  }
+
+  #intro p {
+    font-size: 1.3em;
+  }
+}
