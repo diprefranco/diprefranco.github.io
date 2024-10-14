@@ -278,6 +278,7 @@ img {
   padding: 25px;
   text-align: center;
   width: 100%;
+  position: relative;
 }
 
 .footer-content {
@@ -285,6 +286,14 @@ img {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  position: relative;
+}
+
+.footer-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 50px;
 }
 
 .footer-links {
@@ -292,6 +301,7 @@ img {
   justify-content: center;
   flex-wrap: wrap;
   gap: 40px;
+  flex-grow: 1;
 }
 
 .link-group ul {
@@ -309,12 +319,18 @@ img {
 
 @media (max-width: 768px) {
   .footer-content {
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+
+  .footer-icon {
+    position: static;
+    margin-bottom: 20px;
+    margin-left: 0;
   }
 
   .footer-links {
-    justify-content: space-between;
+    justify-content: center;
     gap: 20px;
   }
 }
