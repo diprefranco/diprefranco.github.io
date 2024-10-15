@@ -1,0 +1,30 @@
+#sample-images {
+  text-align: center;
+  background-image: url("/assets/img/background-image.jpg");
+  padding: var(--sectionseparation) 0px;
+}
+
+#sample-images .p2 {
+  margin-top: 8px;
+  color: var(--coloraccent);
+}
+
+.sample-images {
+  margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.sample-images img {
+  flex: 1;
+  min-width: 250px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.sample-images img:hover {
+  scale: 1.02;
+  transition: var(--transition);
+}

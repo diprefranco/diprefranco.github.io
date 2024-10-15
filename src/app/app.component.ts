@@ -1,45 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from './layout/header/header.component';
+import { FooterComponent } from "./layout/footer/footer.component";
+import { HeroComponent } from "./layout/hero/hero.component";
+import { SampleImagesComponent } from "./layout/sample-images/sample-images.component";
+import { CardsComponent } from './layout/cards/cards.component';
+import { MoreInformationComponent } from "./layout/more-information/more-information.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [
+    RouterOutlet,
+    HeaderComponent,
+    FooterComponent,
+    HeroComponent,
+    SampleImagesComponent,
+    CardsComponent,
+    MoreInformationComponent
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent implements OnInit {
-  //footer
-  readonly currentYear = new Date().getFullYear();
-
-  ngOnInit() {
-    //header
-    this.setHamburgerMenuConfig();
-  }
-
-  setHamburgerMenuConfig() {
-    const hamburger = document.querySelector(".hamburger");
-    const navMenu = document.querySelector(".nav-menu");
-
-    if (hamburger && navMenu) {
-      this.addHamburgerClickEvent(hamburger, navMenu);
-      this.addNavLinksClickEvent(hamburger, navMenu);
-    }
-  }
-
-  private addHamburgerClickEvent(hamburger: Element, navMenu: Element) {
-    hamburger.addEventListener("click", () => {
-      hamburger.classList.toggle("active");
-      navMenu.classList.toggle("active");
-    });
-  }
-
-  private addNavLinksClickEvent(hamburger: Element, navMenu: Element) {
-    document.querySelectorAll(".nav-link").forEach((n) =>
-      n.addEventListener("click", () => {
-        hamburger.classList.remove("active");
-        navMenu.classList.remove("active");
-      })
-    );
-  }
+export class AppComponent {
 }

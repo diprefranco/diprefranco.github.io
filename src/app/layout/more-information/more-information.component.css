@@ -1,0 +1,28 @@
+.more-information {
+  margin-top: var(--sectionseparation);
+  text-align: center;
+}
+
+.more-information-buttons {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.button {
+  font: var(--links);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 60px;
+  border: solid 2px var(--colorlinks);
+  border-radius: 10px;
+}
+
+.button:hover {
+  border: solid 2px var(--coloraccent);
+  transition: var(--transition);
+}

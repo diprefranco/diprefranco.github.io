@@ -1,0 +1,45 @@
+.column {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.hero div {
+  flex: 1;
+}
+
+img {
+  width: 100%;
+}
+
+.button {
+  font: var(--links);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 20px;
+  height: 60px;
+  border: solid 2px var(--colorlinks);
+  border-radius: 10px;
+}
+
+.button:hover {
+  border: solid 2px var(--coloraccent);
+  transition: var(--transition);
+}
+
+#primary-links {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+@media (max-width: 800px) {
+  .hero {
+    flex-direction: column-reverse;
+    padding-bottom: 40px;
+  }
+}
