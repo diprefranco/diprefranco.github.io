@@ -273,6 +273,35 @@ img {
   border-radius: 5px;
 }
 
+.more-information {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.more-information-buttons {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.button2 {
+  font: var(--links);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 60px;
+  border: solid 2px var(--colorlinks);
+  border-radius: 10px;
+}
+
+.button2:hover {
+  border: solid 2px var(--coloraccent);
+  transition: var(--transition);
+}
+
 /* Footer */
 .footer {
   background-color: var(--colorp2);
