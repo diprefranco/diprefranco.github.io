@@ -61,19 +61,14 @@ body {
   color: var(--colorsecondary);
 }
 
-section {
-  width: 90vw;
-  max-width: 1080px;
-  margin: auto;
-}
-
-/* Header */
+section,
 .header {
   width: 90vw;
   max-width: 1080px;
   margin: auto;
 }
 
+/* Header */
 header {
   margin-top: 20px;
   display: flex;
