@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
+import { ResourceService } from '../../resource.service';
 
 @Component({
   selector: 'web-hero',
@@ -7,5 +8,15 @@ import { Component } from '@angular/core';
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.css'
 })
-export class HeroComponent {
+export class HeroComponent implements OnInit {
+  resumeUrl = '';
+  private resourceService = inject(ResourceService);
+
+  ngOnInit() {
+    this.init();
+  }
+
+  private init() {
+    this.resumeUrl = this.resourceService.getResumeUrl();
+  }
 }

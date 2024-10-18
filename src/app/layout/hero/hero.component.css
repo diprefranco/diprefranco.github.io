@@ -9,6 +9,16 @@
   flex: 1;
 }
 
+.hero p.first-line {
+  margin-top: 8px;
+  font-size: x-large;
+}
+
+span.line-through {
+  text-decoration: line-through;
+  font-style: italic;
+}
+
 img {
   width: 100%;
 }
