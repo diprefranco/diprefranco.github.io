@@ -60,14 +60,14 @@ ul li {
   grid-template-rows: min-content min-content min-content;
 }
 
-/* item-header */
-ul li .item-header {
-  --item-headerH: 3rem;
-  height: var(--item-headerH);
+/* job-header */
+ul li .job-header {
+  --job-headerH: 3rem;
+  height: var(--job-headerH);
   margin-inline: calc(var(--inlineP) * -1);
 
   text-align: center;
-  background-color: var(--item-color);
+  background-color: var(--job-color);
 
   color: white;
   font-size: 1.25rem;
@@ -77,15 +77,15 @@ ul li .item-header {
   place-content: center;
   position: relative;
 
-  border-radius: calc(var(--item-headerH) / 2) 0 0 calc(var(--item-headerH) / 2);
+  border-radius: calc(var(--job-headerH) / 2) 0 0 calc(var(--job-headerH) / 2);
 }
 
-/* item-header flap */
-ul li .item-header::before {
+/* job-header flap */
+ul li .job-header::before {
   content: "";
   width: var(--inlineP);
   aspect-ratio: 1;
-  background: var(--item-color);
+  background: var(--job-color);
   background-image: linear-gradient(rgba(0, 0, 0, 0.2) 100%, transparent);
   position: absolute;
   top: 100%;
@@ -95,13 +95,13 @@ ul li .item-header::before {
 }
 
 /* circle */
-ul li .item-header::after {
+ul li .job-header::after {
   content: "";
   position: absolute;
   width: 2rem;
   aspect-ratio: 1;
   background: var(--colorp2);
-  border: 0.3rem solid var(--item-color);
+  border: 0.3rem solid var(--job-color);
   border-radius: 50%;
   top: 50%;
 
@@ -109,15 +109,15 @@ ul li .item-header::after {
   right: calc(100% + var(--col-gap) + var(--line-w) / 2);
 }
 
-/* item-content */
-ul li .item-content {
+/* job-content */
+ul li .job-content {
   background: var(--colorp2);
   position: relative;
   padding-inline: 1.5rem;
   border-radius: 0 0 10px 10px;
 }
 
-ul li .item-content {
+ul li .job-content {
   overflow: hidden;
   padding-block-start: 1.5rem;
   padding-block-end: 1rem;
@@ -146,17 +146,17 @@ ul li .item-content {
     grid-row: 2/4;
   }
 
-  ul li:nth-child(odd) .item-header::before {
+  ul li:nth-child(odd) .job-header::before {
     clip-path: polygon(0 0, 100% 0, 100% 100%);
     left: 0;
   }
 
-  ul li:nth-child(odd) .item-header::after {
+  ul li:nth-child(odd) .job-header::after {
     transform: translate(-50%, -50%);
     left: calc(100% + var(--col-gap) + var(--line-w) / 2);
   }
 
-  ul li:nth-child(odd) .item-header {
-    border-radius: 0 calc(var(--item-headerH) / 2) calc(var(--item-headerH) / 2) 0;
+  ul li:nth-child(odd) .job-header {
+    border-radius: 0 calc(var(--job-headerH) / 2) calc(var(--job-headerH) / 2) 0;
   }
 }
