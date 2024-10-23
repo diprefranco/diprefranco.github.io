@@ -10,6 +10,12 @@
   align-content: center;
 }
 
+svg {
+  fill: var(--colorsecondary);
+  width: 18px;
+  margin-right: 12px;
+}
+
 *,
 *::before,
 *::after {
@@ -26,7 +32,6 @@ ul {
   column-gap: var(--col-gap);
   margin: 0;
   padding: 0;
-  max-width: 800px;
 }
 
 /* line */
