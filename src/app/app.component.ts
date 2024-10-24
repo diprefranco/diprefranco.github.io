@@ -7,6 +7,7 @@ import { SampleImagesComponent } from "./layout/sample-images/sample-images.comp
 import { CardsComponent } from './layout/cards/cards.component';
 import { MoreInformationComponent } from "./layout/more-information/more-information.component";
 import { ExperienceComponent } from "./layout/experience/experience.component";
+import { ProjectsComponent } from './layout/projects/projects.component';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +20,8 @@ import { ExperienceComponent } from "./layout/experience/experience.component";
     SampleImagesComponent,
     CardsComponent,
     MoreInformationComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    ProjectsComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
