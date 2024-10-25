@@ -10,6 +10,10 @@
   flex: 1;
 }
 
+.code-snippet {
+  margin-top: 5px;
+}
+
 img {
   border-radius: 5px;
   min-width: 340px;
