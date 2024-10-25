@@ -8,6 +8,7 @@ import { CardsComponent } from './layout/cards/cards.component';
 import { MoreInformationComponent } from "./layout/more-information/more-information.component";
 import { ExperienceComponent } from "./layout/experience/experience.component";
 import { ProjectsComponent } from './layout/projects/projects.component';
+import { AboutMeComponent } from './layout/about-me/about-me.component';
 
 @Component({
   selector: 'app-root',
@@ -21,7 +22,8 @@ import { ProjectsComponent } from './layout/projects/projects.component';
     CardsComponent,
     MoreInformationComponent,
     ExperienceComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    AboutMeComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
