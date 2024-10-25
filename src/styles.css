@@ -6,9 +6,13 @@
   --colorsecondaryfooter: #aaa;
   --coloraccent: #05f903;
   --colorlinks: #0abefb;
-  --colorcommentedcode: #6A9955;
+  --colorcodecommented: #6a9955;
+  --colorcodekeyword: #569cd6;
+  --colorcodevariable: #9cdcfe;
+  --colorcodeopenclosesymbol: #179fff;
+  --colorcodeliteralvalue: #ce9178;
   --ff: "Open Sans", sans-serif;
-  --ffcommentedcode: Consolas, 'Courier New', monospace;
+  --ffcode: Consolas, 'Courier New', monospace;
   --h1: bold 54px/70px var(--ff);
   --h2: bold 36px/36px var(--ff);
   --h3: bold 24px/30px var(--ff);
@@ -54,8 +58,31 @@ p {
 }
 
 .commented-code {
-  font-family: var(--ffcommentedcode);
-  color: var(--colorcommentedcode);
+  font-family: var(--ffcode);
+  color: var(--colorcodecommented);
+}
+
+.code-snippet {
+  background-color: var(--colorp2);
+  font-family: var(--ffcode);
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.code-snippet span.keyword {
+  color: var(--colorcodekeyword);
+}
+
+.code-snippet span.variable {
+  color: var(--colorcodevariable);
+}
+
+.code-snippet span.open-close-symbol {
+  color: var(--colorcodeopenclosesymbol);
+}
+
+.code-snippet span.literal-value {
+  color: var(--colorcodeliteralvalue);
 }
 
 html {
