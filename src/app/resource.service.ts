@@ -30,4 +30,12 @@ export class ResourceService {
   getLinkedInUrl(): string {
     return 'https://www.linkedin.com/in/dipre-franco/';
   }
+
+  getGithubUrl(): string {
+    return 'https://github.com/diprefranco';
+  }
+
+  getStackoverflowUrl(): string {
+    return 'https://stackoverflow.com/users/6809179';
+  }
 }
