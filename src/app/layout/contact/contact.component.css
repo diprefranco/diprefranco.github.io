@@ -28,6 +28,7 @@
 svg {
   fill: var(--colorlinks);
   width: 30px;
+  height: 30px;
 }
 
 svg:hover {

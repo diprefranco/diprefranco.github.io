@@ -62,6 +62,7 @@
 svg {
   fill: var(--colorsecondary);
   width: 18px;
+  height: 18px;
 }
 
 svg:hover {
