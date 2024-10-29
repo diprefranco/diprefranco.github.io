@@ -2,7 +2,6 @@
   background-color: var(--colorp2);
   margin-top: var(--sectionseparation);
   padding: 25px;
-  text-align: center;
   position: relative;
 }
 
@@ -29,7 +28,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 70px;
   flex-grow: 1;
 }
 
@@ -72,11 +71,15 @@ svg:hover {
 
 .footer-copyright {
   margin-top: 2px;
+  text-align: center;
 }
 
 .footer-copyright a {
   font-size: 0.9em;
-  font-weight: inherit;
+}
+
+a {
+  font-weight: unset;
 }
 
 @media (max-width: 768px) {
@@ -89,10 +92,5 @@ svg:hover {
     position: static;
     margin-bottom: 20px;
     margin-left: 0;
-  }
-
-  .footer-links {
-    justify-content: center;
-    gap: 20px;
   }
 }

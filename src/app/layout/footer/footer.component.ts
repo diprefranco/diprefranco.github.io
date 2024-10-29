@@ -10,6 +10,7 @@ import { ResourceService } from '../../resource.service';
 })
 export class FooterComponent implements OnInit {
   readonly currentYear = new Date().getFullYear();
+  resumeUrl!: string;
   whatsAppUrl!: string;
   emailUrl!: string;
   linkedInUrl!: string;
@@ -23,6 +24,7 @@ export class FooterComponent implements OnInit {
   }
 
   private init() {
+    this.resumeUrl = this.resourceService.getResumeUrl();
     this.whatsAppUrl = this.resourceService.getWhatsAppUrl();
     this.emailUrl = this.resourceService.getEmailUrl();
     this.linkedInUrl = this.resourceService.getLinkedInUrl();

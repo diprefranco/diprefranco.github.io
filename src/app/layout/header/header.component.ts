@@ -9,7 +9,7 @@ import { ResourceService } from '../../resource.service';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent implements OnInit {
-  resumeUrl = '';
+  resumeUrl!: string;
   private resourceService = inject(ResourceService);
 
   ngOnInit() {
