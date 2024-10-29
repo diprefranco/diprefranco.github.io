@@ -3,6 +3,7 @@
   align-items: center;
   gap: 20px;
   flex-wrap: wrap;
+  margin-top: 5px;
 }
 
 .hero div {
@@ -21,6 +22,7 @@ span.line-through {
 
 img {
   width: 100%;
+  border-radius: 5px;
 }
 
 .button {
@@ -48,8 +50,16 @@ img {
 }
 
 @media (max-width: 800px) {
+  .column {
+    gap: 0;
+  }
+
   .hero {
     flex-direction: column-reverse;
     padding-bottom: 40px;
+  }
+
+  .img {
+    max-width: 450px;
   }
 }
