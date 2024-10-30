@@ -21,6 +21,7 @@
   --p: 18px/30px var(--ff);
   --transition: 0.3s ease-in-out;
   --logowidth: 50px;
+  --logoheight: 40px;
   --sectionseparation: 100px;
 }
 
