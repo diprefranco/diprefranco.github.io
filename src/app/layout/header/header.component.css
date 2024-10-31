@@ -6,8 +6,10 @@ header {
   height: 80px;
 }
 
-.logo {
+svg {
+  fill: var(--colorcodekeyword);
   width: var(--logowidth);
+  height: var(--logoheight);
 }
 
 header a {
