@@ -56,7 +56,6 @@ img {
 
   .hero {
     flex-direction: column-reverse;
-    padding-bottom: 40px;
   }
 
   .img {

@@ -1,6 +1,6 @@
 .footer {
-  background-color: var(--colorp2);
   margin-top: var(--sectionseparation);
+  background-color: var(--colorp2);
   padding: 25px;
   position: relative;
 }
