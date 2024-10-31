@@ -23,7 +23,6 @@ img {
 @media (max-width: 800px) {
   #about-me {
     flex-direction: column-reverse;
-    padding-bottom: 40px;
     text-align: center;
   }
 
