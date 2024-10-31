@@ -1,5 +1,5 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { ResourceService } from '../../resource.service';
+import { ResourceService } from '../../../resource.service';
 
 @Component({
   selector: 'web-hero',
@@ -9,7 +9,7 @@ import { ResourceService } from '../../resource.service';
   styleUrl: './hero.component.css'
 })
 export class HeroComponent implements OnInit {
-  resumeUrl = '';
+  resumeUrl!: string;
   private resourceService = inject(ResourceService);
 
   ngOnInit() {
