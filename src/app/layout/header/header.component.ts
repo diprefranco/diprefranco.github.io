@@ -30,6 +30,7 @@ export class HeaderComponent implements OnInit {
       this.addHamburgerClickEvent(hamburger, navMenu, body);
       this.addNavLinksClickEvent(hamburger, navMenu, body);
       this.disableTabKeyIfHamburgerMenuIsOpen(navMenu);
+      this.closeHamburgerMenuOnWindowResize(hamburger, navMenu, body);
     }
   }
 
@@ -43,11 +44,7 @@ export class HeaderComponent implements OnInit {
 
   private addNavLinksClickEvent(hamburger: Element, navMenu: Element, body: Element) {
     document.querySelectorAll(".nav-link").forEach((n) =>
-      n.addEventListener("click", () => {
-        hamburger.classList.remove("active");
-        navMenu.classList.remove("active");
-        body.classList.remove("blocked");
-      })
+      n.addEventListener("click", () => this.closeHamburgerMenu(hamburger, navMenu, body))
     );
   }
 
@@ -58,5 +55,20 @@ export class HeaderComponent implements OnInit {
       }
       return true;
     }
+  }
+
+  private closeHamburgerMenuOnWindowResize(hamburger: Element, navMenu: Element, body: Element) {
+    const closeHamburgerMenu = this.closeHamburgerMenu;
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 800) {
+        closeHamburgerMenu(hamburger, navMenu, body);
+      }
+    });
+  }
+
+  private closeHamburgerMenu(hamburger: Element, navMenu: Element, body: Element) {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+    body.classList.remove("blocked");
   }
 }
