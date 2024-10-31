@@ -84,5 +84,6 @@ header a:hover {
   .nav-menu.active {
     right: 0;
     transition: var(--transition);
+    z-index: 1;
   }
 }

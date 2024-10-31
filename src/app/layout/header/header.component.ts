@@ -24,26 +24,39 @@ export class HeaderComponent implements OnInit {
   private setHamburgerMenuConfig() {
     const hamburger = document.querySelector(".hamburger");
     const navMenu = document.querySelector(".nav-menu");
+    const body = document.querySelector("body");
 
-    if (hamburger && navMenu) {
-      this.addHamburgerClickEvent(hamburger, navMenu);
-      this.addNavLinksClickEvent(hamburger, navMenu);
+    if (hamburger && navMenu && body) {
+      this.addHamburgerClickEvent(hamburger, navMenu, body);
+      this.addNavLinksClickEvent(hamburger, navMenu, body);
+      this.disableTabKeyIfHamburgerMenuIsOpen(navMenu);
     }
   }
 
-  private addHamburgerClickEvent(hamburger: Element, navMenu: Element) {
+  private addHamburgerClickEvent(hamburger: Element, navMenu: Element, body: Element) {
     hamburger.addEventListener("click", () => {
       hamburger.classList.toggle("active");
       navMenu.classList.toggle("active");
+      body.classList.toggle("blocked");
     });
   }
 
-  private addNavLinksClickEvent(hamburger: Element, navMenu: Element) {
+  private addNavLinksClickEvent(hamburger: Element, navMenu: Element, body: Element) {
     document.querySelectorAll(".nav-link").forEach((n) =>
       n.addEventListener("click", () => {
         hamburger.classList.remove("active");
         navMenu.classList.remove("active");
+        body.classList.remove("blocked");
       })
     );
+  }
+
+  private disableTabKeyIfHamburgerMenuIsOpen(navMenu: Element) {
+    document.onkeydown = (evt) => {
+      if (evt.key === 'Tab' && navMenu.classList.contains("active")) {
+        return false;
+      }
+      return true;
+    }
   }
 }
