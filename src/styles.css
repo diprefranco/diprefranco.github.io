@@ -115,3 +115,9 @@ a:hover {
   color: var(--coloraccent);
   transition: var(--transition);
 }
+
+@media (max-width: 800px) {
+  body.blocked {
+    overflow: hidden;
+  }
+}
