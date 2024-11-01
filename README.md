@@ -5,7 +5,7 @@ Welcome! This project showcases my personal website, where you can find informat
 ## Demo
 https://diprefranco.github.io/
 
-# ![DipreFrancoGitHubIo](https://diprefranco.github.io/assets/img/website.png)
+# ![Website Screenshot](https://diprefranco.github.io/assets/img/website.png)
 
 ## Website Overview
 The website opens with a header and main section (hero section) to catch attention right away, giving users easy access to my resume and contact options.
@@ -19,10 +19,10 @@ The main sections include:
 The footer contains the site icon, navigation links, and contact icons. The entire site is **responsive** and adjusts to different screen sizes.
 
 ## Usage
-To run the site locally, clone this repository and navigate to the root directory. Then, install the dependencies with:
+To run the site locally, clone this repository and navigate to the root directory. Then, install the dependencies with:<br />
 `npm install`
 
-Start the application with:
+Start the application with:<br />
 `npm start`
 
 ## Version Information
