@@ -1,0 +1,31 @@
+<div id="experience">
+  <h2>Experience</h2>
+</div>
+<section class="experience">
+  <ul>
+    <ng-container *ngFor="let job of jobs">
+      <li [style]="'--job-color:' + job.headerColor">
+        <div class="job-header">{{job.period}}</div>
+        <div class="job-content">
+          <p>
+            <svg>
+              <use href="assets/icon/company.svg#company-icon"></use>
+            </svg>
+            <span>{{job.companyName}}</span>
+          </p>
+          <p>
+            <svg>
+              <use href="assets/icon/job-position.svg#job-position-icon"></use>
+            </svg>
+            <span>{{job.position}}</span>
+          </p>
+          <p>
+            <span class="commented-code">// {{job.techStack}}.</span>
+          </p>
+          <br />
+          <a href="{{job.companyUrl}}" target="_blank">Website</a>
+        </div>
+      </li>
+    </ng-container>
+  </ul>
+</section>

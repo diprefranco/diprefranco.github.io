@@ -1,1 +1,123 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --colorp2: #191919;
+  --colorprimary: #000000;
+  --colorsecondary: #ffffff;
+  --colorprimarydivider: #333;
+  --colorsecondaryfooter: #aaa;
+  --coloraccent: #05f903;
+  --colorlinks: #0abefb;
+  --colorcodecommented: #6a9955;
+  --colorcodekeyword: #569cd6;
+  --colorcodevariable: #9cdcfe;
+  --colorcodeopenclosesymbol: #179fff;
+  --colorcodeliteralvalue: #ce9178;
+  --ff: "Open Sans", sans-serif;
+  --ffcode: Consolas, 'Courier New', monospace;
+  --h1: bold 42px/60px var(--ff);
+  --h2: bold 36px/36px var(--ff);
+  --h3: bold 24px/30px var(--ff);
+  --links: bold 18px/18px var(--ff);
+  --p2: 30px/36px var(--ff);
+  --p: 18px/30px var(--ff);
+  --transition: 0.3s ease-in-out;
+  --logowidth: 50px;
+  --logoheight: 40px;
+  --sectionseparation: 120px;
+}
+
+h1,
+h2,
+h3,
+p,
+.links,
+.p2 {
+  margin: 0px;
+}
+
+h1 {
+  font: var(--h1);
+}
+
+h2 {
+  font: var(--h2);
+}
+
+h3 {
+  font: var(--h3);
+}
+
+.links {
+  font: var(--links);
+}
+
+.p2 {
+  font: var(--p2);
+}
+
+p {
+  font: var(--p);
+}
+
+.commented-code {
+  font-family: var(--ffcode);
+  color: var(--colorcodecommented);
+}
+
+.code-snippet {
+  background-color: var(--colorp2);
+  font-family: var(--ffcode);
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.code-snippet span.keyword {
+  color: var(--colorcodekeyword);
+}
+
+.code-snippet span.variable {
+  color: var(--colorcodevariable);
+}
+
+.code-snippet span.open-close-symbol {
+  color: var(--colorcodeopenclosesymbol);
+}
+
+.code-snippet span.literal-value {
+  color: var(--colorcodeliteralvalue);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--ff);
+  padding: 0px;
+  margin: auto;
+  background-color: var(--colorprimary);
+  color: var(--colorsecondary);
+}
+
+header,
+section {
+  width: 90vw;
+  max-width: 1080px;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+  color: var(--colorlinks);
+  font: var(--links);
+}
+
+a:hover {
+  color: var(--coloraccent);
+  transition: var(--transition);
+}
+
+@media (max-width: 800px) {
+  body.blocked {
+    overflow: hidden;
+  }
+}
