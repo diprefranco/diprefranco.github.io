@@ -1,0 +1,44 @@
+#contact {
+  margin-top: var(--sectionseparation);
+  text-align: center;
+}
+
+.contact {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.contact div {
+  flex: 1;
+}
+
+.contact div p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact div p a {
+  margin-left: 8px;
+}
+
+svg {
+  fill: var(--colorlinks);
+  width: 30px;
+  height: 30px;
+}
+
+svg:hover {
+  fill: var(--coloraccent);
+  transition: var(--transition);
+}
+
+@media (max-width: 800px) {
+  .contact {
+    flex-direction: column;
+    text-align: center;
+  }
+}

@@ -1,27 +1,39 @@
-# DiprefrancoGithubIo
+My Personal Website
+============
+Welcome! This project showcases my personal website, where you can find information about me, my experience, and my work. It’s built using Angular and serves as a starting point if you’d like to create your own personal website. If you're interested, feel free to use this project or start with my [Angular Template For My Website](https://github.com/diprefranco/angular-template-my-website).
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.2.
+## Demo
+https://diprefranco.github.io/
 
-## Development server
+# ![Website Screenshot](https://diprefranco.github.io/assets/img/website.png)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Website Overview
+The website opens with a header and main section (hero section) to catch attention right away, giving users easy access to my resume and contact options.
 
-## Code scaffolding
+The main sections include:
+- **Experience**: a timeline with a brief overview of my work history.
+- **Projects**: cards showcasing my personal projects.
+- **About Me**: a short description about me.
+- **Contact**: various ways to reach me.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The footer contains the site icon, navigation links, and contact icons. The entire site is **responsive** and adjusts to different screen sizes.
 
-## Build
+## Usage
+To run the site locally, clone this repository and navigate to the root directory. Then, install the dependencies with:<br />
+`npm install`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Start the application with:<br />
+`npm start`
 
-## Running unit tests
+## Version Information
+This project was built with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.2.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Acknowledgments
+This design was inspired by work from [Sajid](https://www.iamsajid.com/). I want to thank him for his videos and examples.<br />
+Check out [Sajid's YouTube channel](https://www.youtube.com/@whosajid) to learn some great web design basics and tricks.
 
-## Running end-to-end tests
+## Author
+GitHub: [Franco Dipre](https://github.com/diprefranco/)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## License
+[MIT LICENSE](LICENSE)

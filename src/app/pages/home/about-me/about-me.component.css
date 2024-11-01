@@ -1,0 +1,32 @@
+#about-me {
+  margin-top: var(--sectionseparation);
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+#about-me div {
+  flex: 1;
+}
+
+.code-snippet {
+  margin-top: 5px;
+}
+
+img {
+  border-radius: 5px;
+  min-width: 340px;
+  max-width: 80%;
+}
+
+@media (max-width: 800px) {
+  #about-me {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  img {
+    min-width: unset;
+  }
+}
