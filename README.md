@@ -1,27 +1,41 @@
-# DiprefrancoGithubIo
+My Personal Website
+============
+Here you can find a brief description about myself and what I do.
+You can start your own personal website using this Angular project.
+Also I have an Angular template for a starting point [here](https://github.com/diprefranco/angular-template-my-website).
+Feel free to use the one you prefer.
 
+## Demo
+https://diprefranco.github.io/
+
+# ![DipreFrancoGitHubIo](https://diprefranco.github.io/assets/img/website.png)
+
+## Site
+The site shows a header followed by the main section (hero section) to catch users attention.
+Here you can access quickly to my resume and see ways of contact me.
+
+After that, we have:
+- Experience section: timeline showing briefily my work experience.
+- Projects section: cards to see all my personal projects.
+- About me section: small paragraph saying a little more about myself.
+- Contact section: different ways of contact me.
+
+At the end, we have the footer showing the site icon, links and the contact svg icons.<br />
+All the site is **responsive** (it adjusts to different screen sizes).
+
+## Usage
+After you clone this repo to your local machine, go to its root directory and run `npm install` to install its dependencies.
+Once the dependencies are installed, you can run `npm start` to start the application.
+
+## Versions
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.2.
 
-## Development server
+## Thanks to
+This web design is based on one from [Sajid](https://www.iamsajid.com/). I want to thank him for his videos and examples.<br />
+[Sajid's YouTube channel](https://www.youtube.com/@whosajid) in case you wanna learn some web design tricks and basics.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Author
+GitHub: [Franco Dipre](https://github.com/diprefranco/)
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## License
+[MIT LICENSE](LICENSE)
