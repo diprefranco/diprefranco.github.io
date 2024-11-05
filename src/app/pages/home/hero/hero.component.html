@@ -14,5 +14,11 @@
     </div>
   </div>
   <!-- original size: 512x640 -->
-  <div class="img"><img src="assets/img/hero-me.jpg" alt="" /></div>
+  <div class="img">
+    <img [hidden]="!heroImageLoaded" src="assets/img/hero-me.jpg" (load)="heroImageLoaded = true" />
+    <div [hidden]="heroImageLoaded" class="loading-spinner-space-to-fill"></div>
+    <div [hidden]="heroImageLoaded" class="loading-spinner-centered">
+      <div class="loading-spinner"></div>
+    </div>
+  </div>
 </section>

@@ -10,6 +10,8 @@ import { ResourceService } from '../../../resource.service';
 })
 export class HeroComponent implements OnInit {
   resumeUrl!: string;
+  heroImageLoaded = false;
+
   private resourceService = inject(ResourceService);
 
   ngOnInit() {
