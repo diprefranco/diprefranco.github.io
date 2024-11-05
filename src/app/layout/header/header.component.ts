@@ -29,7 +29,7 @@ export class HeaderComponent implements OnInit {
     if (hamburger && navMenu && body) {
       this.addHamburgerClickEvent(hamburger, navMenu, body);
       this.addNavLinksClickEvent(hamburger, navMenu, body);
-      this.disableTabKeyIfHamburgerMenuIsOpen(navMenu);
+      this.addKeyDownEventWhenHamburgerMenuIsOpen(hamburger, navMenu, body);
       this.closeHamburgerMenuOnWindowResize(hamburger, navMenu, body);
     }
   }
@@ -48,12 +48,17 @@ export class HeaderComponent implements OnInit {
     );
   }
 
-  private disableTabKeyIfHamburgerMenuIsOpen(navMenu: Element) {
+  private addKeyDownEventWhenHamburgerMenuIsOpen(hamburger: Element, navMenu: Element, body: Element) {
     document.onkeydown = (evt) => {
-      if (evt.key === 'Tab' && navMenu.classList.contains("active")) {
-        return false;
+      if (this.isHamburgerMenuOpen(navMenu)) {
+        switch (evt.key) {
+          case 'Tab':
+            return this.enableKeyDown(false);
+          case 'Escape':
+            this.closeHamburgerMenu(hamburger, navMenu, body);
+        }
       }
-      return true;
+      return this.enableKeyDown(true);
     }
   }
 
@@ -70,5 +75,13 @@ export class HeaderComponent implements OnInit {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
     body.classList.remove("blocked");
+  }
+
+  private isHamburgerMenuOpen(navMenu: Element): boolean {
+    return navMenu.classList.contains("active");
+  }
+
+  private enableKeyDown(enable: boolean): boolean {
+    return enable;
   }
 }
