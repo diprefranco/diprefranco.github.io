@@ -44,7 +44,7 @@ span.line-through {
   transition: var(--transition);
 }
 
-.img {
+div.hero-image {
   position: relative;
   width: 100%;
 }
@@ -52,6 +52,24 @@ span.line-through {
 img {
   width: 100%;
   border-radius: 5px;
+}
+
+/* Initial hidden state: invisible, no space taken */
+img.img-invisible-effect {
+  visibility: hidden;
+  position: absolute;
+  opacity: 0;
+  transform: scale(0.95); /* Optional zoom effect */
+  transition: opacity 1s ease, transform 1s ease, visibility 0s 1s;
+}
+
+/* Loaded state: visible and smooth transition */
+img.img-visible-effect {
+  visibility: visible;
+  position: relative;
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 1s ease, transform 1s ease;
 }
 
 .loading-spinner-space-to-fill {
@@ -92,7 +110,7 @@ img {
     flex-direction: column-reverse;
   }
 
-  .img {
+  div.hero-image {
     max-width: 450px;
   }
 }
