@@ -15,10 +15,6 @@
   </div>
   <!-- original size: 512x640 -->
   <div class="hero-image">
-    <img src="assets/img/hero-me.jpg" (load)="heroImageLoaded = true" class="img-invisible-effect" [ngClass]="{ 'img-visible-effect': heroImageLoaded }" />
-    <div [hidden]="heroImageLoaded" class="loading-spinner-space-to-fill"></div>
-    <div [hidden]="heroImageLoaded" class="loading-spinner-centered">
-      <div class="loading-spinner"></div>
-    </div>
+    <web-img [src]="'assets/img/hero-me.jpg'"></web-img>
   </div>
 </section>

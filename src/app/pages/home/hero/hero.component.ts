@@ -1,17 +1,16 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { ResourceService } from '../../../resource.service';
-import { CommonModule } from '@angular/common';
+import { ImgComponent } from "../../../shared/img/img.component";
 
 @Component({
   selector: 'web-hero',
   standalone: true,
-  imports: [CommonModule],
+  imports: [ImgComponent],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.css'
 })
 export class HeroComponent implements OnInit {
   resumeUrl!: string;
-  heroImageLoaded = false;
 
   private resourceService = inject(ResourceService);
 
