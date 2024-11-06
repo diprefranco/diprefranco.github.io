@@ -20,9 +20,12 @@ span.line-through {
   font-style: italic;
 }
 
-img {
-  width: 100%;
-  border-radius: 5px;
+#primary-links {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
 }
 
 .button {
@@ -41,12 +44,8 @@ img {
   transition: var(--transition);
 }
 
-#primary-links {
-  margin-top: 40px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 20px;
+div.hero-image {
+  width: 100%;
 }
 
 @media (max-width: 800px) {
@@ -58,7 +57,7 @@ img {
     flex-direction: column-reverse;
   }
 
-  .img {
+  div.hero-image {
     max-width: 450px;
   }
 }
