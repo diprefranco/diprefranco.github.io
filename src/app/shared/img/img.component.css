@@ -26,11 +26,6 @@ img.img-visible-effect {
   transition: opacity 1s ease, transform 1s ease;
 }
 
-.spinner-space-to-fill {
-  padding-top: calc(663 / 530 * 100%);
-  margin-bottom: 5px;
-}
-
 .spinner-centered {
   position: absolute;
   top: 50%;

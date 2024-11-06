@@ -10,5 +10,7 @@ import { Component, Input } from '@angular/core';
 })
 export class ImgComponent {
   @Input() src!: string;
+  @Input() width!: number;
+  @Input() height!: number;
   imgLoaded = false;
 }
