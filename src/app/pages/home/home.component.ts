@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HeroComponent } from './hero/hero.component';
 import { ExperienceComponent } from "./experience/experience.component";
 import { ProjectsComponent } from './projects/projects.component';
@@ -18,5 +18,27 @@ import { ContactComponent } from './contact/contact.component';
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
+
+  ngOnInit() {
+    this.setScrollAnimation();
+  }
+
+  private setScrollAnimation() {
+    const sections = document.querySelectorAll('.animate-section');
+    const observer = this.getIntersectionObserver();
+    sections.forEach(section => observer.observe(section));
+  }
+
+  private getIntersectionObserver(): IntersectionObserver {
+    return new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+  }
 }
