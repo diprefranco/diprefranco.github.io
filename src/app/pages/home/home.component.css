@@ -1,0 +1,8 @@
+.animate-section {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.animate-section.visible {
+  opacity: 1;
+}
