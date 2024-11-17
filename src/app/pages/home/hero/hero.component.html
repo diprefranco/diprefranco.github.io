@@ -1,6 +1,6 @@
-<section class="hero column">
+<section class="hero column" role="region" aria-labelledby="hero-title">
   <div>
-    <h1>Franco Dipre</h1>
+    <h1 id="hero-title">Franco Dipre</h1>
     <p class="first-line">
       Full Stack Developer
       <span class="commented-code">//Angular + C#.Net</span>
@@ -9,12 +9,12 @@
       Ready to <span class="line-through">code</span> solve people's problems
     </p>
     <div id="primary-links">
-      <a href="{{resumeUrl}}" target="_blank" class="button">Resume</a>
-      <a href="#contact" class="button">Contact</a>
+      <a href="{{resumeUrl}}" target="_blank" class="button" aria-label="View my resume">Resume</a>
+      <a href="#contact" class="button" aria-label="Contact me">Contact</a>
     </div>
   </div>
   <!-- original size: 512x640 -->
   <div class="hero-image">
-    <web-img [src]="'assets/img/hero-me.jpg'" [width]="530" [height]="663" [alt]="'Franco Dipre Full Stack Developer'"></web-img>
+    <web-img [src]="'assets/img/hero-me.jpg'" [width]="530" [height]="663" [alt]="'Franco Dipre, a full stack developer, smiling in a professional headshot.'"></web-img>
   </div>
 </section>
