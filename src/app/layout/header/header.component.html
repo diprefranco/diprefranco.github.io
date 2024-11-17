@@ -1,10 +1,10 @@
-<header class="header">
-  <a href="./">
-    <svg>
+<header class="header" role="banner">
+  <a href="./" aria-label="Homepage">
+    <svg aria-hidden="true">
       <use href="assets/icon/logo.svg#logo-icon"></use>
     </svg>
   </a>
-  <ul class="nav-menu">
+  <ul class="nav-menu" role="navigation" aria-label="Main menu">
     <li class="nav-item">
       <a href="{{resumeUrl}}" target="_blank" class="nav-link">Resume</a>
     </li>
@@ -21,7 +21,7 @@
       <a href="#contact" class="nav-link">Contact</a>
     </li>
   </ul>
-  <div class="hamburger">
+  <div class="hamburger" aria-label="Toggle navigation menu">
     <span class="bar"></span>
     <span class="bar"></span>
     <span class="bar"></span>

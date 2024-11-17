@@ -5,9 +5,9 @@
 <section class="contact">
   <div>
     <p>
-      <span>{{phoneNumber}}</span>
-      <a href="{{whatsAppUrl}}" target="_blank">
-        <svg>
+      <span aria-label="Phone number">{{phoneNumber}}</span>
+      <a href="{{whatsAppUrl}}" target="_blank" aria-label="Chat with me on WhatsApp">
+        <svg aria-hidden="true">
           <use href="assets/icon/whatsapp.svg#whatsapp-icon"></use>
         </svg>
       </a>
@@ -15,9 +15,9 @@
   </div>
   <div>
     <p>
-      <span>{{email}}</span>
-      <a href="{{emailUrl}}">
-        <svg>
+      <span aria-label="Email">{{email}}</span>
+      <a href="{{emailUrl}}" aria-label="Contact me via email">
+        <svg aria-hidden="true">
           <use href="assets/icon/email.svg#email-icon"></use>
         </svg>
       </a>
@@ -26,8 +26,8 @@
   <div>
     <p>
       <span>LinkedIn</span>
-      <a href="{{linkedInUrl}}" target="_blank">
-        <svg>
+      <a href="{{linkedInUrl}}" target="_blank" aria-label="Go to my LinkedIn account">
+        <svg aria-hidden="true">
           <use href="assets/icon/linkedin.svg#linkedin-icon"></use>
         </svg>
       </a>
