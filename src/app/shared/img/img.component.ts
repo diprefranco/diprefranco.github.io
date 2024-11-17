@@ -12,5 +12,6 @@ export class ImgComponent {
   @Input() src!: string;
   @Input() width!: number;
   @Input() height!: number;
+  @Input() alt!: string;
   imgLoaded = false;
 }
