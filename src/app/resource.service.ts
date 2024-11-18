@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ResourceService {
-  private phoneNumber = '+34 614 266 448';
+  private phoneNumber = '+54 9 3464 442868';
   private email = 'diprefranco@gmail.com';
 
   getResumeUrl(): string {
