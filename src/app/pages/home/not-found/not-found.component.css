@@ -20,6 +20,11 @@ h2 {
   flex: 1;
 }
 
+img {
+  width: 100%;
+  border-radius: 5px;
+}
+
 .links {
   margin-top: 20px;
   display: flex;
@@ -55,7 +60,7 @@ h2 {
     text-align: center;
   }
 
-  div.page-not-found-image {
+  img {
     max-width: 550px;
   }
 
