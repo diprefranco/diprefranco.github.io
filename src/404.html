@@ -30,91 +30,28 @@
 
   <style>
     :root {
-      --colorp2: #191919;
       --colorprimary: #000000;
       --colorsecondary: #ffffff;
-      --colorprimarydivider: #333;
-      --colorsecondaryfooter: #aaa;
       --coloraccent: #05f903;
       --colorlinks: #0abefb;
-      --colorcodecommented: #6a9955;
-      --colorcodekeyword: #569cd6;
-      --colorcodevariable: #9cdcfe;
-      --colorcodeopenclosesymbol: #179fff;
-      --colorcodeliteralvalue: #ce9178;
       --ff: "Open Sans", sans-serif;
-      --ffcode: Consolas, 'Courier New', monospace;
-      --h1: bold 42px/60px var(--ff);
-      --h2: bold 36px/36px var(--ff);
-      --h3: bold 24px/30px var(--ff);
-      --links: bold 18px/18px var(--ff);
-      --p2: 30px/36px var(--ff);
+      --h1: bold 70px / 90px var(--ff);
+      --h2: bold 36px / 65px var(--ff);
+      --links: bold 17px / 17px var(--ff);
       --p: 18px/30px var(--ff);
       --transition: 0.3s ease-in-out;
-      --logowidth: 50px;
-      --logoheight: 40px;
       --sectionseparation: 120px;
     }
 
     h1,
     h2,
-    h3,
     p,
-    .links,
-    .p2 {
-      margin: 0px;
-    }
-
-    h1 {
-      font: var(--h1);
-    }
-
-    h2 {
-      font: var(--h2);
-    }
-
-    h3 {
-      font: var(--h3);
-    }
-
     .links {
-      font: var(--links);
-    }
-
-    .p2 {
-      font: var(--p2);
+      margin: 0px;
     }
 
     p {
       font: var(--p);
-    }
-
-    .commented-code {
-      font-family: var(--ffcode);
-      color: var(--colorcodecommented);
-    }
-
-    .code-snippet {
-      background-color: var(--colorp2);
-      font-family: var(--ffcode);
-      padding: 15px;
-      border-radius: 5px;
-    }
-
-    .code-snippet span.keyword {
-      color: var(--colorcodekeyword);
-    }
-
-    .code-snippet span.variable {
-      color: var(--colorcodevariable);
-    }
-
-    .code-snippet span.open-close-symbol {
-      color: var(--colorcodeopenclosesymbol);
-    }
-
-    .code-snippet span.literal-value {
-      color: var(--colorcodeliteralvalue);
     }
 
     html {
@@ -146,21 +83,15 @@
       color: var(--coloraccent);
       transition: var(--transition);
     }
-
-    @media (max-width: 800px) {
-      body.blocked {
-        overflow: hidden;
-      }
-    }
   </style>
 
   <style>
     h1 {
-      font: bold 70px / 90px var(--ff);
+      font: var(--h1);
     }
 
     h2 {
-      font: bold 36px / 65px var(--ff);
+      font: var(--h2);
     }
 
     #page-not-found {
@@ -189,7 +120,7 @@
     }
 
     .button {
-      font: bold 17px / 17px var(--ff);
+      font: var(--links);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -206,7 +137,7 @@
 
     .animate {
       opacity: 0;
-      transition: opacity 0.4s ease-in-out;
+      transition: opacity var(--transition);
     }
 
     .animate.visible {
