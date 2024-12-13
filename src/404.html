@@ -240,12 +240,12 @@
 <body>
   <section id="page-not-found" class="page-not-found column animate">
     <div>
-      <img src="assets/img/doc-marty-remote-control.jpg" alt="Doc and Marty with remote control." />
+      <img id="error-image" src="assets/img/doc-marty-remote-control.jpg" alt="Doc and Marty with remote control." />
     </div>
     <div class="page-not-found-text">
       <h1>404</h1>
-      <h2>Great Scott!</h2>
-      <p>
+      <h2 id="error-title">Great Scott!</h2>
+      <p id="error-message">
         The flux capacitor must've sent you to a missing page.
       </p>
       <div class="links">
@@ -254,9 +254,49 @@
     </div>
   </section>
   <script>
+
     setTimeout(() => {
       document.querySelector('.animate').classList.add('visible');
     }, 0.1);
+
+    const data = [
+      {
+        imgSrc: "assets/img/doc-marty-remote-control.jpg",
+        imgAlt: "Doc and Marty with remote control.",
+        errorTitle: "Great Scott!",
+        errorMessage: "The flux capacitor must've sent you to a missing page."
+      },
+      {
+        imgSrc: "assets/img/marty-doc-old-west.jpg",
+        imgAlt: "Marty is warried because this webpage doesn't exist.",
+        errorTitle: "This is heavy!",
+        errorMessage: "This webpage hasn't been invented yet."
+      },
+      {
+        imgSrc: "assets/img/marty-speaking.jpg",
+        imgAlt: "Marty speaking at the Enchantment Under the Sea Dance after playing Johnny B. Goode.",
+        errorTitle: "Guess this page isn't ready yet...",
+        errorMessage: "But your kids are gonna love it!"
+      },
+      {
+        imgSrc: "assets/img/biff-marty-school.jpg",
+        imgAlt: "Biff almost pouch marty at school.",
+        errorTitle: "This page isn't here, butthead!",
+        errorMessage: "Why don't you make like a tree and get outta here!"
+      }
+    ];
+
+    // Generate a random integer between 0 and the array length - 1
+    const randomIndex = Math.floor(Math.random() * data.length);
+
+    // Pick a random element from the array
+    const randomItem = data[randomIndex];
+
+    document.getElementById('error-title').textContent = randomItem.errorTitle;
+    document.getElementById('error-message').textContent = randomItem.errorMessage;
+    document.getElementById('error-image').src = randomItem.imgSrc;
+    document.getElementById('error-image').alt = randomItem.imgAlt;
+
   </script>
 </body>
 
