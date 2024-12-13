@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Franco Dipre - Page Not Found</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Full Stack Developer with expertise in Angular and C# .Net - Explore my projects and experience">
+  <meta name="keywords"
+    content="Franco Dipre, Full Stack Developer, Angular Developer, C# .Net Developer, Software Engineer, Frontend Developer, Backend Developer, Web Development, Languages">
+  <meta name="author" content="Franco Dipre">
+  <meta property="og:site_name" content="Franco Dipre">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://diprefranco.github.io/">
+  <meta property="og:title" content="Franco Dipre - Full Stack Developer">
+  <meta property="og:description"
+    content="Full Stack Developer with expertise in Angular and C# .Net - Explore my projects and experience">
+  <meta property="og:image" content="https://diprefranco.github.io/assets/img/website-og.jpg">
+  <meta property="og:image:alt" content="Franco Dipre. Full Stack Developer">
+  <meta name="twitter:title" content="Franco Dipre - Full Stack Developer">
+  <meta name="twitter:description"
+    content="Full Stack Developer with expertise in Angular and C# .Net - Explore my projects and experience">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:image" content="https://diprefranco.github.io/assets/img/website-og.jpg">
+  <link rel="canonical" href="https://diprefranco.github.io/">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --colorp2: #191919;
+      --colorprimary: #000000;
+      --colorsecondary: #ffffff;
+      --colorprimarydivider: #333;
+      --colorsecondaryfooter: #aaa;
+      --coloraccent: #05f903;
+      --colorlinks: #0abefb;
+      --colorcodecommented: #6a9955;
+      --colorcodekeyword: #569cd6;
+      --colorcodevariable: #9cdcfe;
+      --colorcodeopenclosesymbol: #179fff;
+      --colorcodeliteralvalue: #ce9178;
+      --ff: "Open Sans", sans-serif;
+      --ffcode: Consolas, 'Courier New', monospace;
+      --h1: bold 42px/60px var(--ff);
+      --h2: bold 36px/36px var(--ff);
+      --h3: bold 24px/30px var(--ff);
+      --links: bold 18px/18px var(--ff);
+      --p2: 30px/36px var(--ff);
+      --p: 18px/30px var(--ff);
+      --transition: 0.3s ease-in-out;
+      --logowidth: 50px;
+      --logoheight: 40px;
+      --sectionseparation: 120px;
+    }
+
+    h1,
+    h2,
+    h3,
+    p,
+    .links,
+    .p2 {
+      margin: 0px;
+    }
+
+    h1 {
+      font: var(--h1);
+    }
+
+    h2 {
+      font: var(--h2);
+    }
+
+    h3 {
+      font: var(--h3);
+    }
+
+    .links {
+      font: var(--links);
+    }
+
+    .p2 {
+      font: var(--p2);
+    }
+
+    p {
+      font: var(--p);
+    }
+
+    .commented-code {
+      font-family: var(--ffcode);
+      color: var(--colorcodecommented);
+    }
+
+    .code-snippet {
+      background-color: var(--colorp2);
+      font-family: var(--ffcode);
+      padding: 15px;
+      border-radius: 5px;
+    }
+
+    .code-snippet span.keyword {
+      color: var(--colorcodekeyword);
+    }
+
+    .code-snippet span.variable {
+      color: var(--colorcodevariable);
+    }
+
+    .code-snippet span.open-close-symbol {
+      color: var(--colorcodeopenclosesymbol);
+    }
+
+    .code-snippet span.literal-value {
+      color: var(--colorcodeliteralvalue);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--ff);
+      padding: 0px;
+      margin: auto;
+      background-color: var(--colorprimary);
+      color: var(--colorsecondary);
+    }
+
+    header,
+    section {
+      width: 90vw;
+      max-width: 1080px;
+      margin: auto;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--colorlinks);
+      font: var(--links);
+    }
+
+    a:hover {
+      color: var(--coloraccent);
+      transition: var(--transition);
+    }
+
+    @media (max-width: 800px) {
+      body.blocked {
+        overflow: hidden;
+      }
+    }
+  </style>
+
+  <style>
+    h1 {
+      font: bold 70px / 90px var(--ff);
+    }
+
+    h2 {
+      font: bold 36px / 65px var(--ff);
+    }
+
+    #page-not-found {
+      margin-top: var(--sectionseparation);
+    }
+
+    .column {
+      display: flex;
+      align-items: center;
+      gap: 35px;
+    }
+
+    .page-not-found div {
+      flex: 1;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    .links {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .button {
+      font: bold 17px / 17px var(--ff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0px 20px;
+      height: 50px;
+      border: solid 2px var(--colorlinks);
+      border-radius: 10px;
+    }
+
+    .button:hover {
+      border: solid 2px var(--coloraccent);
+      transition: var(--transition);
+    }
+
+    .animate {
+      opacity: 0;
+      transition: opacity 0.4s ease-in-out;
+    }
+
+    .animate.visible {
+      opacity: 1;
+    }
+
+    @media (max-width: 800px) {
+      .column {
+        gap: 0;
+      }
+
+      .page-not-found {
+        flex-direction: column;
+      }
+
+      div.page-not-found-text {
+        text-align: center;
+      }
+
+      img {
+        max-width: 550px;
+      }
+
+      .links {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section id="page-not-found" class="page-not-found column animate">
+    <div>
+      <img src="assets/img/doc-marty-remote-control.jpg" alt="Doc and Marty with remote control." />
+    </div>
+    <div class="page-not-found-text">
+      <h1>404</h1>
+      <h2>Great Scott!</h2>
+      <p>
+        The flux capacitor must've sent you to a missing page.
+      </p>
+      <div class="links">
+        <a href="./" class="button" aria-label="Back to the Homepage">Back to the Homepage</a>
+      </div>
+    </div>
+  </section>
+  <script>
+    setTimeout(() => {
+      document.querySelector('.animate').classList.add('visible');
+    }, 0.1);
+  </script>
+</body>
+
+</html>
