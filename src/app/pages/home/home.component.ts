@@ -4,6 +4,7 @@ import { ExperienceComponent } from "./experience/experience.component";
 import { ProjectsComponent } from './projects/projects.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { ContactComponent } from './contact/contact.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @Component({
   selector: 'web-home',
@@ -13,7 +14,8 @@ import { ContactComponent } from './contact/contact.component';
     ExperienceComponent,
     ProjectsComponent,
     AboutMeComponent,
-    ContactComponent
+    ContactComponent,
+    NotFoundComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
