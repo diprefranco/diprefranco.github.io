@@ -47,6 +47,15 @@ img {
   transition: var(--transition);
 }
 
+.animate {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.animate.visible {
+  opacity: 1;
+}
+
 @media (max-width: 800px) {
   .column {
     gap: 0;
