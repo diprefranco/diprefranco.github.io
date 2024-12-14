@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Franco Dipre - Page Not Found</title>
+  <title>404 - Page Not Found</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description"
@@ -30,91 +30,28 @@
 
   <style>
     :root {
-      --colorp2: #191919;
       --colorprimary: #000000;
       --colorsecondary: #ffffff;
-      --colorprimarydivider: #333;
-      --colorsecondaryfooter: #aaa;
       --coloraccent: #05f903;
       --colorlinks: #0abefb;
-      --colorcodecommented: #6a9955;
-      --colorcodekeyword: #569cd6;
-      --colorcodevariable: #9cdcfe;
-      --colorcodeopenclosesymbol: #179fff;
-      --colorcodeliteralvalue: #ce9178;
       --ff: "Open Sans", sans-serif;
-      --ffcode: Consolas, 'Courier New', monospace;
-      --h1: bold 42px/60px var(--ff);
-      --h2: bold 36px/36px var(--ff);
-      --h3: bold 24px/30px var(--ff);
-      --links: bold 18px/18px var(--ff);
-      --p2: 30px/36px var(--ff);
+      --h1: bold 70px / 90px var(--ff);
+      --h2: bold 36px / 65px var(--ff);
+      --links: bold 17px / 17px var(--ff);
       --p: 18px/30px var(--ff);
       --transition: 0.3s ease-in-out;
-      --logowidth: 50px;
-      --logoheight: 40px;
       --sectionseparation: 120px;
     }
 
     h1,
     h2,
-    h3,
     p,
-    .links,
-    .p2 {
-      margin: 0px;
-    }
-
-    h1 {
-      font: var(--h1);
-    }
-
-    h2 {
-      font: var(--h2);
-    }
-
-    h3 {
-      font: var(--h3);
-    }
-
     .links {
-      font: var(--links);
-    }
-
-    .p2 {
-      font: var(--p2);
+      margin: 0px;
     }
 
     p {
       font: var(--p);
-    }
-
-    .commented-code {
-      font-family: var(--ffcode);
-      color: var(--colorcodecommented);
-    }
-
-    .code-snippet {
-      background-color: var(--colorp2);
-      font-family: var(--ffcode);
-      padding: 15px;
-      border-radius: 5px;
-    }
-
-    .code-snippet span.keyword {
-      color: var(--colorcodekeyword);
-    }
-
-    .code-snippet span.variable {
-      color: var(--colorcodevariable);
-    }
-
-    .code-snippet span.open-close-symbol {
-      color: var(--colorcodeopenclosesymbol);
-    }
-
-    .code-snippet span.literal-value {
-      color: var(--colorcodeliteralvalue);
     }
 
     html {
@@ -146,21 +83,15 @@
       color: var(--coloraccent);
       transition: var(--transition);
     }
-
-    @media (max-width: 800px) {
-      body.blocked {
-        overflow: hidden;
-      }
-    }
   </style>
 
   <style>
     h1 {
-      font: bold 70px / 90px var(--ff);
+      font: var(--h1);
     }
 
     h2 {
-      font: bold 36px / 65px var(--ff);
+      font: var(--h2);
     }
 
     #page-not-found {
@@ -189,7 +120,7 @@
     }
 
     .button {
-      font: bold 17px / 17px var(--ff);
+      font: var(--links);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -206,7 +137,7 @@
 
     .animate {
       opacity: 0;
-      transition: opacity 0.4s ease-in-out;
+      transition: opacity var(--transition);
     }
 
     .animate.visible {
@@ -240,12 +171,12 @@
 <body>
   <section id="page-not-found" class="page-not-found column animate">
     <div>
-      <img src="assets/img/doc-marty-remote-control.jpg" alt="Doc and Marty with remote control." />
+      <img id="error-image" src="assets/img/doc-marty-remote-control.jpg" alt="Doc and Marty with remote control." />
     </div>
     <div class="page-not-found-text">
       <h1>404</h1>
-      <h2>Great Scott!</h2>
-      <p>
+      <h2 id="error-title">Great Scott!</h2>
+      <p id="error-message">
         The flux capacitor must've sent you to a missing page.
       </p>
       <div class="links">
@@ -254,9 +185,57 @@
     </div>
   </section>
   <script>
-    setTimeout(() => {
-      document.querySelector('.animate').classList.add('visible');
-    }, 0.1);
+    setDOMWith(getRandomErrorMessage());
+    setAnimation();
+
+    function setDOMWith(errorMessage) {
+      document.getElementById('error-title').textContent = errorMessage.errorTitle;
+      document.getElementById('error-message').textContent = errorMessage.errorMessage;
+      const errorImage = document.getElementById('error-image');
+      errorImage.src = errorMessage.imgSrc;
+      errorImage.alt = errorMessage.imgAlt;
+    }
+
+    function getRandomErrorMessage() {
+      const errorMessages = getAllErrorMessages();
+      const randomIndex = Math.floor(Math.random() * errorMessages.length);
+      return errorMessages[randomIndex];
+    }
+
+    function getAllErrorMessages() {
+      return [
+        {
+          imgSrc: "assets/img/doc-marty-remote-control.jpg",
+          imgAlt: "Doc and Marty with remote control.",
+          errorTitle: "Great Scott!",
+          errorMessage: "The flux capacitor must've sent you to a missing page."
+        },
+        {
+          imgSrc: "assets/img/marty-doc-old-west.jpg",
+          imgAlt: "Marty is warried because this webpage doesn't exist.",
+          errorTitle: "This is heavy!",
+          errorMessage: "This webpage hasn't been invented yet."
+        },
+        {
+          imgSrc: "assets/img/marty-speaking.jpg",
+          imgAlt: "Marty speaking at the Enchantment Under the Sea Dance after playing Johnny B. Goode.",
+          errorTitle: "Guess this page...",
+          errorMessage: "Isn't ready yet. But your kids are gonna love it!"
+        },
+        {
+          imgSrc: "assets/img/biff-marty-school.jpg",
+          imgAlt: "Biff almost pouch marty at school.",
+          errorTitle: "This page isn't here, butthead!",
+          errorMessage: "Why don't you make like a tree and get outta here!"
+        }
+      ];
+    }
+
+    function setAnimation() {
+      setTimeout(() => {
+        document.querySelector('.animate').classList.add('visible');
+      }, 0.1);
+    }
   </script>
 </body>
 
