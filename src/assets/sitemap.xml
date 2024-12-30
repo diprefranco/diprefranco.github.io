@@ -7,9 +7,15 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://drive.google.com/file/d/1KG__wUbzWDChwJD0BUnZMK_qafDUg9h1/view?usp=drive_link</loc>
-    <lastmod>2024-11-16</lastmod>
+    <loc>https://diprefranco.github.io/files/dipre-franco-resume.pdf</loc>
+    <lastmod>2024-12-30</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://diprefranco.github.io/files/dipre-franco-resume-esp.pdf</loc>
+    <lastmod>2024-12-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
   </url>
 </urlset>

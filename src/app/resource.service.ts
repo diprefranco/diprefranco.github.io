@@ -8,7 +8,7 @@ export class ResourceService {
   private email = 'diprefranco@gmail.com';
 
   getResumeUrl(): string {
-    return 'https://drive.google.com/file/d/1KG__wUbzWDChwJD0BUnZMK_qafDUg9h1/view?usp=drive_link';
+    return 'files/dipre-franco-resume.pdf';
   }
 
   getPhoneNumber(): string {
