@@ -36,4 +36,4 @@ Check out [Sajid's YouTube channel](https://www.youtube.com/@whosajid) to learn 
 GitHub: [Franco Dipre](https://github.com/diprefranco/)
 
 ## License
-[MIT LICENSE](LICENSE)
+This project is licensed under the [MIT License](LICENSE).

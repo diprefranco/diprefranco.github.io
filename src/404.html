@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>404 - Page Not Found</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Full Stack Developer with expertise in Angular and C# .Net - Explore my projects and experience">
+  <meta name="keywords"
+    content="Franco Dipre, Full Stack Developer, Angular Developer, C# .Net Developer, Software Engineer, Frontend Developer, Backend Developer, Web Development, Languages">
+  <meta name="author" content="Franco Dipre">
+  <meta property="og:site_name" content="Franco Dipre">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://diprefranco.github.io/">
+  <meta property="og:title" content="Franco Dipre - Full Stack Developer">
+  <meta property="og:description"
+    content="Full Stack Developer with expertise in Angular and C# .Net - Explore my projects and experience">
+  <meta property="og:image" content="https://diprefranco.github.io/assets/img/website-og.jpg">
+  <meta property="og:image:alt" content="Franco Dipre. Full Stack Developer">
+  <meta name="twitter:title" content="Franco Dipre - Full Stack Developer">
+  <meta name="twitter:description"
+    content="Full Stack Developer with expertise in Angular and C# .Net - Explore my projects and experience">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:image" content="https://diprefranco.github.io/assets/img/website-og.jpg">
+  <link rel="canonical" href="https://diprefranco.github.io/">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --colorprimary: #000000;
+      --colorsecondary: #ffffff;
+      --coloraccent: #05f903;
+      --colorlinks: #0abefb;
+      --ff: "Open Sans", sans-serif;
+      --h1: bold 70px / 90px var(--ff);
+      --h2: bold 36px / 65px var(--ff);
+      --links: bold 17px / 17px var(--ff);
+      --p: 18px/30px var(--ff);
+      --transition: 0.3s ease-in-out;
+      --sectionseparation: 120px;
+    }
+
+    h1,
+    h2,
+    p,
+    .links {
+      margin: 0px;
+    }
+
+    p {
+      font: var(--p);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--ff);
+      padding: 0px;
+      margin: auto;
+      background-color: var(--colorprimary);
+      color: var(--colorsecondary);
+    }
+
+    header,
+    section {
+      width: 90vw;
+      max-width: 1080px;
+      margin: auto;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--colorlinks);
+      font: var(--links);
+    }
+
+    a:hover {
+      color: var(--coloraccent);
+      transition: var(--transition);
+    }
+  </style>
+
+  <style>
+    h1 {
+      font: var(--h1);
+    }
+
+    h2 {
+      font: var(--h2);
+    }
+
+    #page-not-found {
+      margin-top: var(--sectionseparation);
+    }
+
+    .column {
+      display: flex;
+      align-items: center;
+      gap: 35px;
+    }
+
+    .page-not-found div {
+      flex: 1;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    .links {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .button {
+      font: var(--links);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0px 20px;
+      height: 50px;
+      border: solid 2px var(--colorlinks);
+      border-radius: 10px;
+    }
+
+    .button:hover {
+      border: solid 2px var(--coloraccent);
+      transition: var(--transition);
+    }
+
+    .animate {
+      opacity: 0;
+      transition: opacity var(--transition);
+    }
+
+    .animate.visible {
+      opacity: 1;
+    }
+
+    @media (max-width: 800px) {
+      .column {
+        gap: 0;
+      }
+
+      .page-not-found {
+        flex-direction: column;
+      }
+
+      div.page-not-found-text {
+        text-align: center;
+      }
+
+      img {
+        max-width: 550px;
+      }
+
+      .links {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section id="page-not-found" class="page-not-found column animate">
+    <div>
+      <img id="error-image" src="assets/img/doc-marty-remote-control.jpg" alt="Doc and Marty with remote control." />
+    </div>
+    <div class="page-not-found-text">
+      <h1>404</h1>
+      <h2 id="error-title">Great Scott!</h2>
+      <p id="error-message">
+        The flux capacitor must've sent you to a missing page.
+      </p>
+      <div class="links">
+        <a href="./" class="button" aria-label="Back to the Homepage">Back to the Homepage</a>
+      </div>
+    </div>
+  </section>
+  <script>
+    setDOMWith(getRandomErrorMessage());
+    setAnimation();
+
+    function setDOMWith(errorMessage) {
+      document.getElementById('error-title').textContent = errorMessage.errorTitle;
+      document.getElementById('error-message').textContent = errorMessage.errorMessage;
+      const errorImage = document.getElementById('error-image');
+      errorImage.src = errorMessage.imgSrc;
+      errorImage.alt = errorMessage.imgAlt;
+    }
+
+    function getRandomErrorMessage() {
+      const errorMessages = getAllErrorMessages();
+      const randomIndex = Math.floor(Math.random() * errorMessages.length);
+      return errorMessages[randomIndex];
+    }
+
+    function getAllErrorMessages() {
+      return [
+        {
+          imgSrc: "assets/img/doc-marty-remote-control.jpg",
+          imgAlt: "Doc and Marty with remote control.",
+          errorTitle: "Great Scott!",
+          errorMessage: "The flux capacitor must've sent you to a missing page."
+        },
+        {
+          imgSrc: "assets/img/marty-doc-old-west.jpg",
+          imgAlt: "Marty is warried because this webpage doesn't exist.",
+          errorTitle: "This is heavy!",
+          errorMessage: "This webpage hasn't been invented yet."
+        },
+        {
+          imgSrc: "assets/img/marty-speaking.jpg",
+          imgAlt: "Marty speaking at the Enchantment Under the Sea Dance after playing Johnny B. Goode.",
+          errorTitle: "Guess this page...",
+          errorMessage: "Isn't ready yet. But your kids are gonna love it!"
+        },
+        {
+          imgSrc: "assets/img/biff-marty-school.jpg",
+          imgAlt: "Biff almost pouch marty at school.",
+          errorTitle: "This page isn't here, butthead!",
+          errorMessage: "Why don't you make like a tree and get outta here!"
+        }
+      ];
+    }
+
+    function setAnimation() {
+      setTimeout(() => {
+        document.querySelector('.animate').classList.add('visible');
+      }, 0.1);
+    }
+  </script>
+</body>
+
+</html>

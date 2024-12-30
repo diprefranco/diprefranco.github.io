@@ -1,0 +1,51 @@
+div.img-container {
+  position: relative;
+  width: 100%;
+}
+
+img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+/* Initial hidden state: invisible, no space taken */
+img.img-invisible-effect {
+  visibility: hidden;
+  position: absolute;
+  opacity: 0;
+  transform: scale(0.95); /* Optional zoom effect */
+  transition: opacity 1s ease, transform 1s ease, visibility 0s 1s;
+}
+
+/* Loaded state: visible and smooth transition */
+img.img-visible-effect {
+  visibility: visible;
+  position: relative;
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.spinner-centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.spinner {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background:
+    radial-gradient(farthest-side, var(--colorcodekeyword) 94%, #0000) top/8px 8px no-repeat,
+    conic-gradient(#0000 30%, var(--colorcodekeyword));
+  mask: radial-gradient(farthest-side, #0000 calc(100% - 8px), #000 0);
+  animation: s3 1s infinite linear;
+}
+
+@keyframes s3 {
+  100% {
+    transform: rotate(1turn)
+  }
+}

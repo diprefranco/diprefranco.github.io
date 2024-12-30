@@ -1,0 +1,8 @@
+<div class="img-container">
+  <img src="{{src}}" alt="{{alt}}" (load)="imgLoaded = true" class="img-invisible-effect" [ngClass]="{ 'img-visible-effect': imgLoaded }" />
+  <div [hidden]="imgLoaded" [style]="'padding-top: calc(' + height + ' / ' + width + ' * 100%); margin-bottom: 5px;'">
+  </div>
+  <div [hidden]="imgLoaded" class="spinner-centered">
+    <div class="spinner"></div>
+  </div>
+</div>

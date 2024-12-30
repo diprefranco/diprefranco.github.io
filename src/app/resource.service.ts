@@ -4,11 +4,11 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ResourceService {
-  private phoneNumber = '+34 614 266 448';
+  private phoneNumber = '+54 9 3464 442868';
   private email = 'diprefranco@gmail.com';
 
   getResumeUrl(): string {
-    return 'https://drive.google.com/file/d/1KG__wUbzWDChwJD0BUnZMK_qafDUg9h1/view?usp=drive_link';
+    return 'files/dipre-franco-resume.pdf';
   }
 
   getPhoneNumber(): string {

@@ -5,25 +5,25 @@
   <ul>
     <ng-container *ngFor="let job of jobs">
       <li [style]="'--job-color:' + job.headerColor">
-        <div class="job-header">{{job.period}}</div>
+        <div class="job-header" aria-label="Job period">{{job.period}}</div>
         <div class="job-content">
-          <p>
-            <svg>
+          <p aria-label="Company name">
+            <svg aria-hidden="true">
               <use href="assets/icon/company.svg#company-icon"></use>
             </svg>
             <span>{{job.companyName}}</span>
           </p>
-          <p>
-            <svg>
+          <p aria-label="Job position">
+            <svg aria-hidden="true">
               <use href="assets/icon/job-position.svg#job-position-icon"></use>
             </svg>
             <span>{{job.position}}</span>
           </p>
-          <p>
+          <p aria-label="Tech stack">
             <span class="commented-code">// {{job.techStack}}.</span>
           </p>
           <br />
-          <a href="{{job.companyUrl}}" target="_blank">Website</a>
+          <a href="{{job.companyUrl}}" target="_blank" aria-label="Visit company website">Website</a>
         </div>
       </li>
     </ng-container>
