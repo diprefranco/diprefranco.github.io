@@ -1,5 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
-import { ResourceService } from '../../resource.service';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'web-header',
@@ -9,16 +8,9 @@ import { ResourceService } from '../../resource.service';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent implements OnInit {
-  resumeUrl!: string;
-  private resourceService = inject(ResourceService);
 
   ngOnInit() {
-    this.init();
     this.setHamburgerMenuConfig();
-  }
-
-  private init() {
-    this.resumeUrl = this.resourceService.getResumeUrl();
   }
 
   private setHamburgerMenuConfig() {
