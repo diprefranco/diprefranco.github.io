@@ -8,7 +8,7 @@ https://diprefranco.github.io/
 # ![Website Screenshot](https://diprefranco.github.io/assets/img/website.png)
 
 ## Website Overview
-The website opens with a header and main section (hero section) to catch attention right away, giving users easy access to my resume and contact options.
+The website opens with a header and main section (hero section) to catch attention right away, giving users easy access to my experience and contact options.
 
 The main sections include:
 - **Experience**: a timeline with a brief overview of my work history.

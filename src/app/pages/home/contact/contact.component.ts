@@ -9,8 +9,6 @@ import { ResourceService } from '../../../resource.service';
   styleUrl: './contact.component.css'
 })
 export class ContactComponent implements OnInit {
-  phoneNumber!: string;
-  whatsAppUrl!: string;
   email!: string;
   emailUrl!: string;
   linkedInUrl!: string;
@@ -22,8 +20,6 @@ export class ContactComponent implements OnInit {
   }
 
   private init() {
-    this.phoneNumber = this.resourceService.getPhoneNumber();
-    this.whatsAppUrl = this.resourceService.getWhatsAppUrl();
     this.email = this.resourceService.getEmail();
     this.emailUrl = this.resourceService.getEmailUrl();
     this.linkedInUrl = this.resourceService.getLinkedInUrl();
