@@ -23,6 +23,12 @@ export class ProjectsComponent {
       imgSrc: 'assets/img/random-me.jpg',
       demoUrl: 'https://diprefranco.github.io/random-me/',
       codeUrl: 'https://github.com/diprefranco/random-me'
+    },
+    {
+      description: 'A collection of creative and themed 404 pages',
+      imgSrc: 'assets/img/404-pages.jpg',
+      demoUrl: 'https://diprefranco.github.io/404-pages/',
+      codeUrl: 'https://github.com/diprefranco/404-pages'
     }
   ];
 }
