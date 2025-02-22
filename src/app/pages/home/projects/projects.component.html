@@ -1,21 +1,13 @@
 <div id="projects">
   <h2>Projects</h2>
 </div>
+
 <section class="projects">
-  <div>
-    <web-img [src]="'assets/img/angular-template-my-website.jpg'" [width]="700" [height]="395"
-      [alt]="'Screenshot of an Angular template for building a personal website.'"></web-img>
-    <p>Angular template to start a personal website</p>
+  <div *ngFor="let project of projects">
+    <web-img [src]="project.imgSrc" [width]="700" [height]="395" alt="Project screenshot"></web-img>
+    <p>{{project.description}}</p>
     <br />
-    <a href="https://diprefranco.github.io/angular-template-my-website/" target="_blank" aria-label="Go to a demo">Demo</a>
-    <a href="https://github.com/diprefranco/angular-template-my-website" target="_blank" aria-label="View the code on GitHub">Code</a>
-  </div>
-  <div>
-    <web-img [src]="'assets/img/random-me.jpg'" [width]="700" [height]="395"
-      [alt]="'Screenshot of a fun app showing a random photo of me on every visit or refresh.'"></web-img>
-    <p>A fun app showing a random photo of me on every visit or refresh</p>
-    <br />
-    <a href="https://diprefranco.github.io/random-me/" target="_blank" aria-label="Go to a demo">Demo</a>
-    <a href="https://github.com/diprefranco/random-me" target="_blank" aria-label="View the code on GitHub">Code</a>
+    <a href="{{project.demoUrl}}" target="_blank" aria-label="Go to a demo">Demo</a>
+    <a href="{{project.codeUrl}}" target="_blank" aria-label="View the code on GitHub">Code</a>
   </div>
 </section>
