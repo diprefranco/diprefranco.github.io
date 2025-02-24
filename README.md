@@ -5,7 +5,7 @@ Welcome! This project showcases my personal website, where you can find informat
 ## Demo
 https://diprefranco.github.io/
 
-# ![Website Screenshot](https://github.com/diprefranco/diprefranco.github.io/blob/main/src/assets/img/website.png)
+# ![Website Screenshot](https://github.com/diprefranco/diprefranco.github.io/blob/main-v1.5/src/assets/img/website.png)
 
 ## Website Overview
 The website opens with a header and main section (hero section) to catch attention right away, giving users easy access to my experience and contact options.
